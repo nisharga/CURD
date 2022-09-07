@@ -1,16 +1,29 @@
 ********************************* This is the 6 step for server side setup **************************************** 
-1.initialize first:  npm init  
-2.install pacakge:  npm i body-parser cors dotenv express mongodb nodemon 
+
+1.initialize first:  <code>**npm init**  </code>
+
+2.install pacakge:  <code>**npm i body-parser cors dotenv express mongodb nodemon**  </code> 
+
 3.package.json file: check all package intall or not &&  
-inside scripts add this two line: <code>"start": "nodemon index.js", "start-dev": "node index.js",<code> 
+inside scripts add this two line:  <code>"start": "nodemon index.js", "start-dev": "node index.js", </code>
+
 4.create .env file and inside it. type: USER=mongodbUser PASSWORD=mongodbPassword from mongodb  
+
 5.inside index.js code already ready for you(nisharga_kabir_mondo_DB_only_other_people_may_change_mongodb_clients_inside_index.js}). 
+
 6.inside index.js after (await client.connect(); dbCollection name).. your code inside here 
+
+
+
 ********************************* This is the 6 step for server side ****************************************
  
 ################### Github create repositories and all code push at once(just change origin) ###############################
-echo "# tedt" >> README.md && git init && git add README.md && git commit -m "first commit" && git branch -M main && git remote add origin https://github.com/nisharga/tedt.git && git push -u origin main
-git add . && git commit -m "second commit" && git push
+
+
+<code>** echo "# nisharga" >> README.md && git init && git add README.md && git commit -m "first commit" && git branch -M main && git remote add origin https://github.com/nisharga/tedt.git && git push -u origin main **</code>
+
+
+<code>** git add . && git commit -m "second commit" && git push **</code>
 ################### Github create repositories and all code push at once(just change origin) ###############################
 
 ###########################Create a server side app && host in heroku
