@@ -20,19 +20,21 @@ inside scripts add this two line:  <code>"start": "nodemon index.js", "start-dev
 ################### Github create repositories and all code push at once(just change origin) ###############################
 
 
-<code>** echo "# nisharga" >> README.md && git init && git add README.md && git commit -m "first commit" && git branch -M main && git remote add origin https://github.com/nisharga/tedt.git && git push -u origin main **</code>
+<code>  echo "# nisharga" >> README.md && git init && git add README.md && git commit -m "first commit" && git branch -M main && git remote add origin https://github.com/nisharga/tedt.git && git push -u origin main  </code>
 
 
-<code>** git add . && git commit -m "second commit" && git push **</code>
+<code> git add . && git commit -m "second commit" && git push  </code>
+
 ################### Github create repositories and all code push at once(just change origin) ###############################
 
-###########################Create a server side app && host in heroku
-################### if already login heroku && and already all code push in github && (.env file, .gitignore file, port use is .env, process.env.PORT use in index.js) then just type ###############################
+########################### Create a server side app && host in heroku ################### 
+if already login heroku && and already all code push in github && (.env file, .gitignore file, 
+port use is .env, process.env.PORT use in index.js) then just type ###############################
 
 
 
-heroku create
-git push heroku main
+<code>heroku create</code>
+<code>git push heroku main</code>
 
 
 firebase login
