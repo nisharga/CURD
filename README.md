@@ -1,6 +1,6 @@
-********************************* This is the 6 step for server side setup ****************************************</br>
-1.initialize first: <code>npm init<code> 
-2.install pacakge: <code>npm i body-parser cors dotenv express mongodb nodemon</code> 
+********************************* This is the 6 step for server side setup **************************************** 
+1.initialize first:  npm init  
+2.install pacakge:  npm i body-parser cors dotenv express mongodb nodemon 
 3.package.json file: check all package intall or not &&  
 inside scripts add this two line: <code>"start": "nodemon index.js", "start-dev": "node index.js",<code> 
 4.create .env file and inside it. type: USER=mongodbUser PASSWORD=mongodbPassword from mongodb  
