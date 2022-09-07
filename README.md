@@ -34,21 +34,30 @@ port use is .env, process.env.PORT use in index.js) then just type #############
 
 
 <code>heroku create</code>
+
 <code>git push heroku main</code>
 
+# Firebase Login And Create a project after that open Hosting(If u wants firebase deploy)
 
-firebase login
-firebase init
+<code>firebase login</code>
+	
+<code>firebase init</code>
 
-(If login not work. altanative this 2 code.
-firebase login --interactive
-firebase init hosting)
+(If login not work. altanative this 2 code.)
+	
+<code>firebase login --interactive</code>
+	
+<code>firebase init hosting)</code>
 
+<h4>Follow This Process</h4>
 
-Are u proceed: Y
-Then select: Github action deploy
-Then select: Use an existing project
-Then select: the project name you create on web
+<code>Are u proceed: Y</code>
+	
+<code>Then select: Github action deploy</code>
+	
+<code>Then select: Use an existing project</code>
+	
+<code>Then select: the project name you create on web</code>
 
 Then type which directory you want to deploy public directory: build
 configure single-page-app: Y
