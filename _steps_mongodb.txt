@@ -158,3 +158,64 @@ const [singleProduct, setsingleProduct] = useState();
               });
     // delet a product from database end 
 ################################## DELET ####################################
+
+
+
+
+############################################################################
+################################## AXIOS ####################################
+############################################################################
+    axios
+      .get("http://localhost:5000/user")
+      .then(function (response) {
+        // handle success
+        setUser(response.data);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () { 
+      });
+
+
+   (async () => {
+      await axios
+        .post("http://localhost:5000/adduser", {
+          name: name,
+          email: email,
+        })
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    })();
+
+
+    axios
+      .put(`http://localhost:5000/user/${id}`, {
+        name: name,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+
+    axios
+      .delete(`http://localhost:5000/userdelet/${id}`)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+
+############################################################################
+################################## AXIOS end ####################################
+############################################################################
