@@ -233,4 +233,62 @@ this type this 2 everyTime changeing.......
 
 <code>npm install axios</code>
 
-<code>const axios = require("axios").default;</code>
+<code>const axios = require("axios").default;</code> (For App.js)
+
+# GET
+
+     axios
+      .get("http://localhost:5000/user")
+      .then(function (response) {
+        setUser(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+
+# POST using async
+
+    (async () => {
+      await axios
+        .post("http://localhost:5000/adduser", {
+          name: name,
+          email: email,
+        })
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+     })();
+     
+# UPDATE
+
+     axios
+      .put(`http://localhost:5000/user/${id}`, {
+        name: "NISHARGA",
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+      
+     
+# DELETE
+
+      axios
+      .delete(`http://localhost:5000/userdelet/${id}`)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+      
+      
+
