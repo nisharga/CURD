@@ -135,15 +135,17 @@ this type this 2 everyTime changeing.......
 
 	//(Client side) get a product from databse using id 
 
-
-const [singleProduct, setsingleProduct] = useState();
-  useEffect(() => {
-    const url = `https://localhost:5000/product/${id}`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setsingleProduct(data));
-  }, [setsingleProduct]);
-  
+	<code>
+	
+	const [singleProduct, setsingleProduct] = useState();
+ 	 useEffect(() => {
+   		 const url = `https://localhost:5000/product/${id}`;
+    		 fetch(url)
+     		 .then((res) => res.json())
+      		.then((data) => setsingleProduct(data));
+  	}, [setsingleProduct]);
+  	
+	</code>
   
 	// get a product from databse using id (Client side)
 
