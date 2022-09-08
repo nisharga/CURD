@@ -224,3 +224,13 @@ this type this 2 everyTime changeing.......
 	      
     // delet a product from database end 
 ################################## DELET ####################################
+
+
+
+# Axios CURD operation
+
+<h3>(THIS IS FOR CLIENT SITE)</h3>
+
+<code>npm install axios</code>
+
+<code>const axios = require("axios").default;</code>
