@@ -113,9 +113,11 @@ this type this 2 everyTime changeing.......
       
       
  // insertOne product for Client side
+ 
 ################################## CREATE ##################### 
  
 ################################## READ ####################### 
+
     // get a product from databse using id (Server side) 
     
     
@@ -148,7 +150,10 @@ const [singleProduct, setsingleProduct] = useState();
 ################################## READ ####################################
 
 ################################## UPDATE ####################################
+
     // update or upsert a data from database (Server side) 
+    
+    
     app.put("/deliverystatus/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
@@ -158,9 +163,12 @@ const [singleProduct, setsingleProduct] = useState();
       const result = await orderCollection.updateOne(query, update, options);
       console.log(data, "deliverystatus updated");
     });
+    
+    
     //  update or upsert a data from database end
 	
     // update a data from databse (Client side)
+    
 	fetch(`https://localhost:5000/deliverystatus/${id}`, {
       method: "PUT",
       headers: {
@@ -172,6 +180,8 @@ const [singleProduct, setsingleProduct] = useState();
     })
       .then((response) => response.json())
       .then((json) => {});
+      
+      
      // update a data from databse end
       
      
@@ -179,7 +189,10 @@ const [singleProduct, setsingleProduct] = useState();
 
 
 ################################## DELET ####################################
+
    // delet a product from database (Server Side)
+   
+   
     app.delete("/myitems/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
@@ -192,7 +205,9 @@ const [singleProduct, setsingleProduct] = useState();
 
     // delet a product from database end 
 
-       // delet a product from database(Client Side)
+    // delet a product from database(Client Side)
+       
+       
 	fetch(`https://glacial-sierra-36711.herokuapp.com/myitems/${id}`, {
               method: "DELETE",
             })
@@ -203,5 +218,7 @@ const [singleProduct, setsingleProduct] = useState();
                   window.location.reload();
                 }
               });
+	      
+	      
     // delet a product from database end 
 ################################## DELET ####################################
