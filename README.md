@@ -133,7 +133,7 @@ this type this 2 everyTime changeing.......
     //  get a product from database end... ifSearchByEmail: just type: query = {email: id}
  
 
-// get a product from databse using id (Client side)
+	//(Client side) get a product from databse using id 
 
 
 const [singleProduct, setsingleProduct] = useState();
@@ -145,7 +145,7 @@ const [singleProduct, setsingleProduct] = useState();
   }, [setsingleProduct]);
   
   
-// get a product from databse using id (Client side)
+	// get a product from databse using id (Client side)
 
 ################################## READ ####################################
 
