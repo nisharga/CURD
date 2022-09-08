@@ -135,7 +135,7 @@ this type this 2 everyTime changeing.......
 
 	//(Client side) get a product from databse using id 
 
-	<code>
+	 
 	
 	const [singleProduct, setsingleProduct] = useState();
  	 useEffect(() => {
@@ -145,7 +145,7 @@ this type this 2 everyTime changeing.......
       		.then((data) => setsingleProduct(data));
   	}, [setsingleProduct]);
   	
-	</code>
+	 
   
 	// get a product from databse using id (Client side)
 
