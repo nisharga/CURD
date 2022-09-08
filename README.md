@@ -59,28 +59,41 @@ port use is .env, process.env.PORT use in index.js) then just type #############
 	
 <code>Then select: the project name you create on web</code>
 
-Then type which directory you want to deploy public directory: build
-configure single-page-app: Y
-Deploys with gitHub: N
+<code>Then type which directory you want to deploy public directory: build</code>
+
+<code>configure single-page-app: Y</code>
+
+<code>Deploys with gitHub: N</code>
 
 this type this 2 everyTime changeing.......
-npm run build
-firebase deply
+
+<code>npm run build</code>
+	
+<code>firebase deply</code>
 
 
 
 ****************************** CRUD OPERATION Using MongoDB ************************************* 
 
 ################################## CREATE ###################################
+	
 // insertOne product to database(Server side)
+	
+	 
+	
     app.post("/addproduct", async (req, res) => {
       const data = req.body;
       const result = await productCollection.insertOne(data);
       console.log(result, "product create on db");
     });
+		
+		 
+			
 // insertOne product to database end.
 
  // insertOne product for (Client side)
+ 
+ 
     fetch("https://localhost:5000/addproduct", {
       method: "POST",
       headers: {
@@ -97,11 +110,15 @@ firebase deply
       .catch((error) => {
         console.error("Error:", error);
       });
+      
+      
  // insertOne product for Client side
-################################## CREATE ####################################
+################################## CREATE ##################### 
  
-################################## READ ####################################
+################################## READ ####################### 
     // get a product from databse using id (Server side) 
+    
+    
     app.get("/product/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) }; 
@@ -109,10 +126,14 @@ firebase deply
       const data = await cursor.toArray();
       res.send(data);
     });
+    
+    
     //  get a product from database end... ifSearchByEmail: just type: query = {email: id}
  
 
 // get a product from databse using id (Client side)
+
+
 const [singleProduct, setsingleProduct] = useState();
   useEffect(() => {
     const url = `https://localhost:5000/product/${id}`;
@@ -120,6 +141,8 @@ const [singleProduct, setsingleProduct] = useState();
       .then((res) => res.json())
       .then((data) => setsingleProduct(data));
   }, [setsingleProduct]);
+  
+  
 // get a product from databse using id (Client side)
 
 ################################## READ ####################################
