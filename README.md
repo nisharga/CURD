@@ -292,3 +292,73 @@ this type this 2 everyTime changeing.......
       
       
 
+# Pagination using React-Query
+
+<code>npm i @tanstack/react-query axios</code>
+
+index.js......
+
+<code>import { QueryClientProvider, QueryClient } from "@tanstack/react-query";</code>
+
+<code>const queryClient = new QueryClient();</code>
+
+
+ 
+  
+<QueryClientProvider client={ queryClient }> 
+	wrap Apps.js in Index.js file
+</Query ClientProvider>
+	 
+
+apps.js....
+
+<code>
+const getUsers = (page_number) => {
+  return axios.get(
+    `https://jsonplaceholder.typicode.com/users?_limit=2&_page=${page_number}`
+  );
+};
+</code>
+
+***before return function***
+
+
+
+const [pageNumber, setPageNumber] = useState(1);
+
+  const { isLoading, isError, error, data, isFetching } = useQuery(
+  
+    ["name", pageNumber],
+    
+    () => getUsers(pageNumber),
+    
+    {
+      keepPreviousData: true,
+    }
+    
+  );
+	
+  if (isLoading) { return <h2>loading</h2>;}
+  
+  if (isFetching) { return <h2>isFetching</h2>;}
+  
+  if (isError) { return <h2>{error.message}</h2>; }
+ 
+ ***inside return app.js***
+ 
+ 
+	{data?.data.map((val) => (
+        <h2>{val.name}</h2>
+      ))}
+      <button
+        onClick={() => setPageNumber(pageNumber - 1)}
+        disabled={pageNumber === 1}
+      >
+        Prev
+      </button>
+      <button
+        onClick={() => setPageNumber(pageNumber + 1)}
+        disabled={pageNumber === 5}
+      >
+        Next
+      </button>
